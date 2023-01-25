@@ -4,7 +4,7 @@ This repository contains the implementation of the frequencyDiff search strategy
 
 ## Usage
 
-An example of full computations can be found in the makefile, and run using `make experiments`. It will create a folder `experiments` with the outputs of the approaches, and a folder `results` with the plots. UVL models can be pulled from the [uvl-models repository](https://github.com/Universal-Variability-Language/uvl-models). Two small examples extracted from this dataset are already given in our repository.
+An example of full computations can be found in the makefile, and run using `make experiments`. It will create a folder `experiments` with the outputs of the approaches, and a folder `results` with the plots. UVL models can be pulled from the [uvl-models repository](https://github.com/Universal-Variability-Language/uvl-models). Two small examples extracted from this dataset are already given in our repository. The conversion from UVL to DIMACS is done using a jar generated from a [FeatureIDE example of conversion](https://github.com/FeatureIDE/FeatureIDE/tree/develop/plugins/de.ovgu.featureide.examples/featureide_examples/Library/FeatureModelTransformation).
 
 The command lines are:
 - To compile the code `mvn -q clean compile assembly:single`. It generates a jar with dependencies in `target`. This jar has a command line interface for all the options (seed, parameters of TableSampling, ...)
