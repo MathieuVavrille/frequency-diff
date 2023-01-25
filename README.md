@@ -1,15 +1,4 @@
-# RandSampFeatureModel
-RandSampFeatureModel is aimed at returning a sample of configurations following a uniform distribution.
+# FrequencyDiff
 
-Example:
+This repository contains the implementation of the frequencyDiff search strategy for t-wise coverage.
 
-``̀`
-
-java -jar randsampfm -e -c -s=100 --path=~/featuremodel.uvl
-
-```
-enumerates and counts the feasible configurations, whereas -s=100 returns 100 random configurations. 
-
-Credits :
-https://github.com/neominik/uvl-parser
-https://github.com/SundermannC/FeatureIDE
