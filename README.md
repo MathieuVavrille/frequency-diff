@@ -39,4 +39,4 @@ In `parse_results.py`, to have consistent colors, the approaches plotted are har
 
 ## Implementation
 
-The FrequencyDiff search strategy implementation (main contribution of the article) is given in file [FrequencyDiff.java](src/main/java/frequencyDiff/twise/FrequencyDiff.java).
+The FrequencyDiff search strategy implementation (main contribution of the article) is given in file [FrequencyDiff.java](src/main/java/frequencyDiff/twise/FrequencyDiffStrategy.java).
