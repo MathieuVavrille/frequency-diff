@@ -104,7 +104,7 @@ public final class MainFrequencyDiff implements Runnable {
       strat = rdStrat;
     }
     else {
-      RandomFrequencyStrategy frStrat = new RandomFrequencyStrategy(solutions, totalSolsPerFeature, fm.getFeatureDiagram().count(), featureToVar, varWeightExp, valWeightExp, new Random(seed), verbose);
+      FrequencyDiffStrategy frStrat = new FrequencyDiffStrategy(solutions, totalSolsPerFeature, fm.getFeatureDiagram().count(), featureToVar, varWeightExp, valWeightExp, new Random(seed), verbose);
       solver.plugMonitor(frStrat);
       solver.setSearch(frStrat);
       strat = frStrat;

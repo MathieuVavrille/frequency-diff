@@ -42,7 +42,6 @@ def generate_one_scatter_plot(versions, times, timeFrequencyDiff, use_table=True
         ax.scatter(times[version], timeFrequencyDiff, color=color, alpha = alpha, label=version.capitalize().replace("0.25","1/4").replace("0.125","1/8").replace("0.0625","1/16"))
     ax.set_xlabel(f"Time for other approach (in s)")
     ax.set_ylabel("Time for `FrequencyDiff` approach (in s)")
-    #ax.set_ylabel("Time for RandomSearch (in s)")
     ax.set_xscale("log")
     ax.set_yscale("log")
     if xlims != None:
@@ -95,8 +94,6 @@ def aggregated_results(parsed_results, main_version, other_version):
         aggregated_time.append(instance_data["times"][other_version]/instance_data["times"][main_version])
         aggregated_id_coverages.append([instance_data["coverages"][main_version][i] / instance_data["coverages"][other_version][i] for i in range(0,100)])
         aggregated_early_coverages.append([find_ratio(instance_data["coverages"][main_version], instance_data["coverages"][other_version], i) for i in range(1,100)])
-    #if other_version == "table-(16, 8, 0.0625)":
-    #    print(aggregated_time)
     return geo_average(aggregated_time), geo_averages(aggregated_id_coverages), geo_averages(aggregated_early_coverages)
         
             

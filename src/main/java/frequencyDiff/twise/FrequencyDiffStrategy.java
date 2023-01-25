@@ -22,7 +22,7 @@ import java.util.Random;
 
 
 
-public class RandomFrequencyStrategy extends AbstractStrategy<IntVar> implements IMonitorSolution, SolutionTimeRecorder {
+public class FrequencyDiffStrategy extends AbstractStrategy<IntVar> implements IMonitorSolution, SolutionTimeRecorder {
 
   
   private final List<Map<Feature,Boolean>> solutions;
@@ -37,7 +37,7 @@ public class RandomFrequencyStrategy extends AbstractStrategy<IntVar> implements
   private final List<Long> solutionTime = new ArrayList<Long>();
   private Long startTime = System.nanoTime();
 
-  public RandomFrequencyStrategy(final List<Map<Feature,Boolean>> solutions, final Map<Feature,BigInteger> totalSolsPerFeature, final BigInteger totalCount, final Map<Feature,BoolVar> featureToVar, final double varWeightExp, final double valWeightExp, final Random random, final boolean verbose) {
+  public FrequencyDiffStrategy(final List<Map<Feature,Boolean>> solutions, final Map<Feature,BigInteger> totalSolsPerFeature, final BigInteger totalCount, final Map<Feature,BoolVar> featureToVar, final double varWeightExp, final double valWeightExp, final Random random, final boolean verbose) {
     this.solutions = solutions;
     BigDecimal totalCountDouble = new BigDecimal(totalCount);
     this.featureFrequency = totalSolsPerFeature.entrySet().stream().collect(Collectors.toMap(e -> e.getKey(), e -> new BigDecimal(e.getValue()).divide(totalCountDouble, 100, RoundingMode.HALF_DOWN).doubleValue()));
