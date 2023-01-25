@@ -29,7 +29,8 @@ Baital and uniform sampling are not run by default in this repository. It requir
 ```python
     TMPSAMPLEFILE = outputFile+'samples_temp.txt'
     PICKLEFILE = outputFile+'saved.pickle'
-    WEIGHTFILEPREF = outputFile+'weights'```
+    WEIGHTFILEPREF = outputFile+'weights'
+```
 
 To run the computations, the file `sampling.py` has to be added when running `scripts/computations.py`. By default results are not processed for baital, there are lines to uncomment in the scripts:
 - lines 20,21 in `generate_all_coverage_files.py`
